@@ -1,0 +1,10 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "maven.executable.preferMavenWrapper": true,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "typescript.tsdk": "frontend/node_modules/typescript/lib",
+  "files.associations": {
+    "*.properties": "properties"
+  },
+  "editor.formatOnSave": true
+}

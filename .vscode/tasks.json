@@ -1,0 +1,151 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Run Full App (Backend + Frontend)",
+      "dependsOn": [
+        "Start Backend (Spring Boot)",
+        "Start Frontend (React + Vite)"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Start Backend (Spring Boot)",
+      "type": "shell",
+      "windows": {
+        "command": ".\\mvnw.cmd spring-boot:run",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "osx": {
+        "command": "./mvnw spring-boot:run",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "linux": {
+        "command": "./mvnw spring-boot:run",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting BackendApplication",
+          "endsPattern": "Started BackendApplication in"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "servers"
+      }
+    },
+    {
+      "label": "Start Frontend (React + Vite)",
+      "type": "shell",
+      "windows": {
+        "command": "npm.cmd run dev",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend"
+        }
+      },
+      "osx": {
+        "command": "npm run dev",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend"
+        }
+      },
+      "linux": {
+        "command": "npm run dev",
+        "options": {
+          "cwd": "${workspaceFolder}/frontend"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE",
+          "endsPattern": "Local:   http://localhost:5173/"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "servers"
+      }
+    },
+    {
+      "label": "🧪 Run Backend Tests",
+      "type": "shell",
+      "windows": {
+        "command": ".\\mvnw.cmd test",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "osx": {
+        "command": "./mvnw test",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "linux": {
+        "command": "./mvnw test",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "group": "test",
+      "problemMatcher": "$maven"
+    },
+    {
+      "label": "📦 Build Production (Backend + Frontend)",
+      "type": "shell",
+      "windows": {
+        "command": ".\\mvnw.cmd clean package -DskipTests; cd ..\\frontend; npm.cmd run build",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "osx": {
+        "command": "./mvnw clean package -DskipTests && cd ../frontend && npm run build",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "linux": {
+        "command": "./mvnw clean package -DskipTests && cd ../frontend && npm run build",
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

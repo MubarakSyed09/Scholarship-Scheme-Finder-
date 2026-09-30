@@ -1,0 +1,14 @@
+com\schemefinder\backend\model\Scheme.class
+com\schemefinder\backend\seeder\DataSeeder.class
+com\schemefinder\backend\exception\ResourceNotFoundException.class
+com\schemefinder\backend\dto\ProfileRequest$ProfileRequestBuilder.class
+com\schemefinder\backend\model\Scheme$SchemeBuilder.class
+com\schemefinder\backend\BackendApplication.class
+com\schemefinder\backend\config\CorsConfig.class
+com\schemefinder\backend\dto\ProfileRequest.class
+com\schemefinder\backend\service\SchemeService.class
+com\schemefinder\backend\exception\GlobalExceptionHandler.class
+com\schemefinder\backend\controller\SchemeController.class
+com\schemefinder\backend\model\EducationLevel.class
+com\schemefinder\backend\repository\SchemeRepository.class
+com\schemefinder\backend\service\SchemeServiceImpl.class

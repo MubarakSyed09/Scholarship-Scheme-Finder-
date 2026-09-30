@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🚀 Launch App & Open Browser",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend/src",
+      "preLaunchTask": "🚀 Run Full App (Backend + Frontend)"
+    },
+    {
+      "name": "☕ Debug Spring Boot Backend (Java)",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "com.schemefinder.backend.BackendApplication",
+      "projectName": "backend",
+      "cwd": "${workspaceFolder}/backend"
+    }
+  ]
+}
