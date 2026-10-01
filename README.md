@@ -220,7 +220,7 @@ java -jar target/backend-0.0.1-SNAPSHOT.jar
 cd frontend
 npm run build
 ```
-The optimized production bundle will be output to `frontend/dist/`, ready to deploy to Nginx, AWS S3/CloudFront, Cloudflare Pages, or Vercel.
+The optimized production bundle will be output to `frontend/dist/`, ready to deploy to Nginx, AWS S3/CloudFront, Cloudflare Pages, Netlify or Vercel.
 
 ---
 
